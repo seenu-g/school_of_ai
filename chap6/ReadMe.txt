@@ -1,3 +1,4 @@
+The output of assignment 6 is https://github.com/seenu-g/school_of_ai/edit/master/chap6/assignment6.ipynb
 Made code modular to extent
 1.Perform 40 epochs without L1 and L2
 2.Perform 40 epochs with L1 
