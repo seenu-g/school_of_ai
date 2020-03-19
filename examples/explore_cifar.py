@@ -61,11 +61,12 @@ for file in os.listdir(path):
         filenames.append(filename)
 
 filenames_array = []
+import numpy as np
 for filename in filenames :
     temp_file = path + "/" + filename
     dictT = unpickle(temp_file)
-    #print ('\n' , dictT[b'filenames'])
-    for dict_item in dictT:
+    print ('\n' , filename,len(dictT[b'labels']),len(dictT[b'data']))
+    for dict_item in dictT :
        item_list = dictT[dict_item]
        with open(filename + ".txt", "w") as output:
            for item in item_list:
