@@ -3,6 +3,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import cv2
+import numpy as np
+import matplotlib.pyplot as plt
+import copy
+from torchvision.utils import make_grid, save_image
 class GradCAM:
     """Calculate GradCAM salinecy map.
     Args:
@@ -105,3 +109,25 @@ def visualize_cam(mask, img, alpha=1.0):
     result = result.div(result.max()).squeeze()
 
     return heatmap, result
+
+def GradCamView(images,model,classes,layers,Figsize = (23,30),subplotx1 = 9, subplotx2 = 3):
+
+    fig = plt.figure(figsize=Figsize)
+    for i,k in enumerate(images):
+        images1 = [images[i][0].cpu()/2+0.5]
+        images2 =  [images[i][0].cpu()/2+0.5]
+        for j in layers:
+                g = GradCAM(model,j)
+                mask, _= g(images[i][0].clone().unsqueeze_(0))
+                heatmap, result = visualize_cam(mask,images[i][0].clone().unsqueeze_(0)/2+0.5 )
+                images1.extend([heatmap])
+                images2.extend([result])
+        # Ploting the images one by one
+        grid_image = make_grid(images1+images2,nrow=len(layers)+1,pad_value=1)
+        npimg = grid_image.numpy()
+        sub = fig.add_subplot(subplotx1, subplotx2, i+1) 
+        plt.imshow(np.transpose(npimg, (1, 2, 0)))
+        sub.set_title('P = '+classes[int(images[i][1])]+" A = "+classes[int(images[i][2])],fontweight="bold",fontsize=18)
+        sub.axis("off")
+        plt.tight_layout()
+        fig.subplots_adjust(wspace=0)
