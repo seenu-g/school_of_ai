@@ -52,3 +52,20 @@ Max at Epoch = 5
 LRMIN = FIND
 LRMAX = FIND
 NO Annihilation
+
+
+
+Some Tips
+we choose a range of LR values, let's say 0.0001 and a large value, say 1.Now we train our model for several epochs. 
+For each epoch change your LR linearly between above low and high value.
+
+And capture the training accuracies for these epochs. Plot curve between LR values and accuracies. 
+You will find a curve like mentioned in the session 11 canvas.
+
+Pick the LR where accuracy is high. Now this LR value will act as max_lr and min_lr, you may choose as max_lr/10 or max_lr/8
+
+Now this is your range which you have found out. 
+Now create a one cycle schedule for these max and min LR values, oscillating b/w epochs 1,5 and 24 
+Train your model fresh for 24 epochs
+
+Also check https://stackoverflow.com/questions/59996859/how-to-use-pytorch-onecyclelr-in-a-training-loop-and-optimizer-scheduler-intera
