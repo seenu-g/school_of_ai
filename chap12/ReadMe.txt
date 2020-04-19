@@ -1,6 +1,6 @@
 
 Submission A for chapter 12 assignment, present in https://github.com/seenu-g/school_of_ai/blob/master/chap12/Trial3.ipynb
-submission A for chapter 12 assignment, present in https://github.com/seenu-g/school_of_ai/blob/master/chap12/annotation%20/num_of_clusters.ipynb
+submission B for chapter 12 assignment, present in https://github.com/seenu-g/school_of_ai/blob/master/chap12/annotation%20/num_of_clusters.ipynb
 
 Project Summary
 Dataset : Tiny-ImageNet. 
