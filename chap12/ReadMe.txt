@@ -4,9 +4,11 @@ Folder contains submission for chapter 11 assignment, present in https://github.
 Project Summary
 Dataset : Tiny-ImageNet. 
 Download URL : http://cs231n.stanford.edu/tiny-imagenet-200.zip
-Model : torchvision.models.resnet18
-Accuracy : 40.xx
-Epochs : 30
+Model : updated ResNet model present in chap12ResNet.py
+Test Accuracy : 55
+
+Test set: Average loss: 0.0075, Accuracy: 18890/33000 (57.24%)
+Accuracy of the network on the 10000 test images: 55 %
 
 New Files Added
 DatasetFromSubset.py - Load dataset specific to test and val
@@ -23,3 +25,4 @@ model.py    -  RESNEt model.  Not used in Chap 12
 show_images.py -  functions to display image in Google Collab. Not used in Chap 12 
 transform.py  -  functions related to albumentations. 
 plot.py        - functions to plot graphs. Not used in Chap 12
+chap12ResNet.py - updated ResNet model using in this architecture
