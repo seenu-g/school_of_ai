@@ -1,31 +1,35 @@
-Activity 1:
-download 500 images of your unique object.
-Annotate the images using the Annotation tool.
-
-Step 1:
+download 500 images of your unique object. Annotate the images using the Annotation tool.
 Clone  repo: https://github.com/miki998/YoloV3_Annotation_Tool
+Follow steps provided in ReadMe.txt present in
+ https://github.com/seenu-g/school_of_ai/blob/master/chap13/YoloV3_Annotation_Tool/ReadMe.txt
+Here we annotate woody character
 
-Step 2:
+Setup
+In Google collab, download repository in to git clone https://github.com/theschoolofai/YoloV3 
+1. Create "weights" folder in the root (YoloV3) folder
+2. Get yolov3-spp-ultralytics.pt from  https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0
+   and place in "weights" folder
+3. Bring images annotation files and related files to these folders
+   1. Copy image files to data/customdata/images
+   2. Copy label txt files to data/customdata/labels
+   3. custom.names - contain string "woody"
+   4. custom.shapes - contains shapes of custom
+   5. custom. txt  - contain relative path to all images
+   6. test.shapes - custom shapes of test images
+   7. test.txt - contains relative path to all test images
+4. Download 2 videos with woody character from below URLS
+Toy story Woody & Buzz https://www.youtube.com/watch?v=YMgoKhFEN6s , 
+Hawaiian Vacation - Trailer https://www.youtube.com/watch?v=5zQ3-ZzHndo 
+Place videos under YoloV3/data/customdata
 
-Files present in folder 
+5. Run python "train.py" --data data/smalcoco/smalcoco.data --batch 10 --cache --epochs 5 --nosave
 
-process.py - Updated. creates txt files in yolov3 format. 
-classes.txt - Updated. class of objects that you want to detect using yolov3. 
+6. !python train.py --data data/customdata/custom.data --batch 10 --cache --cfg cfg/yolov3-custom.cfg --epochs 200 --nosave
 
-resize.py - Clone
-standardize.py - Clone 
-verify.py - Clone
-main.py - Clone
+7. python3 detect.py --weights weights/last.pt  --source "/content/gdrive/My Drive/school_of_ai/chap13/YoloV3/data/customdata/Toy story Woody & Buzz.mp4" --output "/content/gdrive/My Drive/school_of_ai/chap13/YoloV3/output1"
+# The output video is copied under YoloV3/output1
+Annotated video uploaded to https://www.youtube.com/watch?v=WmX9KPxvpFE
 
-Not present here
-data/customdata/images - contains input images that are annotated. Not checked-in here. 
-                          Checked-in as similar structure in main project
-
-Step 3 : Annotate images
-  Run python3 main.py
-  Perform annotation in UI
-
-Strpe 4: created by program
-1. data/customdata/labels - contains yolk format self of the images. Checked-in here.
-2. train.txt
-3. custom_shapes.txt
+8. !python3 detect.py --weights weights/last.pt  --source "/content/gdrive/My Drive/school_of_ai/chap13/YoloV3/data/customdata/Hawaiian Vacation - Trailer.mp4" --output "/content/gdrive/My Drive/school_of_ai/chap13/YoloV3/output2"
+# The output video is copied under YoloV3/output2
+Annotated video uploaded to https://www.youtube.com/watch?v=smOn1VNoP6Q

@@ -19,7 +19,7 @@ images - contains input images that are annotated. Not checked-in here.
 
 Step 3 : Annotate images
   Run python3 main.py
-  Perform annotation in UI
+  Perform annotation in UI for 125 images and generate labels
 
 Strpe 4: files created by program
 1. Labels - contains yolk format self of the images. Checked-in here.
