@@ -1,10 +1,16 @@
+COCO_Annotation
+Please find steps to setup execute at 
+https://github.com/seenu-g/school_of_ai/blob/master/chap13/COCO_annotation/ReadMe.txt
+This can be executed in local laptop itself
+
+YoloV3_Annotation_Tool
 download 500 images of your unique object. Annotate the images using the Annotation tool.
 Clone  repo: https://github.com/miki998/YoloV3_Annotation_Tool
 Follow steps provided in ReadMe.txt present in
  https://github.com/seenu-g/school_of_ai/blob/master/chap13/YoloV3_Annotation_Tool/ReadMe.txt
-Here we annotate woody character
+Here we annotate woody character and this can be executed in laptop itself.
 
-Setup
+YoloV3 Setup
 In Google collab, download repository in to git clone https://github.com/theschoolofai/YoloV3 
 1. Create "weights" folder in the root (YoloV3) folder
 2. Get yolov3-spp-ultralytics.pt from  https://drive.google.com/open?id=1LezFG5g3BCW6iYaV89B2i64cqEUZD7e0
