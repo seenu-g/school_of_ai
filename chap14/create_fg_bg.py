@@ -46,8 +46,8 @@ for j in  range(61,62): #1 foreground image  ---------------You should choose yo
         outfile.write(bg_file_name + ' fg'+ str(j)+'.png' + ' mask'+ str(j)+'.jpg' + ' fg-bg' + str(start)+'.jpg' + ' fg-bg-mask' +str(start)+'.jpg' + '\n')
         start+=1
         
-        bg2.save(f"/Fg-Bg/fg-bg{str(start)}.jpg",optimize=True, quality=30)
-        black_img2.save(f"/Fg-Bg-Mask/fg-bg-mask{str(start)}.jpg",optimize=True, quality=30)
+        bg2.save(f"Fg-Bg/fg-bg{str(start)}.jpg",optimize=True, quality=30)
+        black_img2.save(f"Fg-Bg-Mask/fg-bg-mask{str(start)}.jpg",optimize=True, quality=30)
         outfile.write(bg_file_name + ' fg'+ str(j)+'.png' + ' mask'+ str(j)+'.jpg' + ' fg-bg' + str(start)+'.jpg' + ' fg-bg-mask' +str(start)+'.jpg'+ '\n')
         start+=1
         print(start)
