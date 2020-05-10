@@ -1,32 +1,39 @@
 Solving requirements provided in Assignment_Requirements.txt required multiple iterations going up and Down
 to ensure that we do not create garbage.
 
-Explanation of Files
+Describe Data files and source files. Then explains activity
+
+Data files
 1. Dataset output is present in Google Drive
 https://drive.google.com/drive/folders/1W4B4YRgMHXstVExFzE6An1rz2DkowVrj?usp=sharing
-2.Overlap_and_maks.ipynb - generate fg-bg, fg-bg-mask images including flip
-3.DepthMapsTrial.ipynb - generate depth images
-4.create_dataset.ipynb - merges ZIP files of my dataset
-5.calculate_Mean_StdDeviation.ipynb - Calculate mean and standard deviation for  5 zip image files of the dataset
-6.generate_labels.ipynb - generate labels for  5 zip image files of the dataset
+2. Foreground also present in https://github.com/seenu-g/school_of_ai/tree/master/chap14/Background
+3. Background also present in https://github.com/seenu-g/school_of_ai/tree/master/chap14/Foreground
+4. Mask images also present in https://github.com/seenu-g/school_of_ai/tree/master/chap14/Mask
 
-# Activity 1: Data Generation
+Python Collab Files
+1.Overlap_and_maks.ipynb - generate fg-bg, fg-bg-mask images including flip
+2.DepthMapsTrial.ipynb - generate depth images
+3.create_dataset.ipynb - merges ZIP files of my dataset
+4.calculate_Mean_StdDeviation.ipynb - Calculate mean and standard deviation for  5 zip image files of the dataset
+5.generate_labels.ipynb - generate labels for  5 zip image files of the dataset
+
+# Activity 1: Data Generation (Overlap_and_maks.ipynb)
 Step 1: Collected 100 background images.(naming format as bg_<<n>>.png))
 Step 2: Collected 20 foreground images, removed it's background and made it transparent.(naming format  as fg_<<n>>.png)
 Step 3: Create mask for each of foreground images using GIMP (naming format  as mask_<<n>>.jpg)
 Step 4: Overlay foreground, foreground_mask on background, background-mask, flip to generate (fg_bg.img and fg_bg_mask.jpg)
 Step 5: Package as .ZIP files and Perform Calculations for mean and standard deviation
 
-# Activity 2: Generate Depth images for fg-bg images
+# Activity 2: Generate Depth images for fg-bg images(DepthMapsTrial.ipynb)
 Step 1 : unpackage ZIP
 Step 2 : Setup Code-repo and already trained model file. Make code changes for our needs
 Step 3 : Generate Depth images
 Step 4 : Package as ZIP file
 
-# Activity 3: Packaging 5 independently generated 80K images to created 400K images
+# Activity 3: Packaging 5 independently generated 80K images to created 400K images (erges ZIP files of my dataset)
 Step 1. Merage Output of activity 1 and activity 2 in to single ZIP file( 5 files instead of 10
-Step 2. Calculate mean and standard deviation across all 5 ZIP files
-Step 3: Generate Labels in the order  FG BG FG-BG FG-BG-Mask Depth
+Step 2. Calculate mean and standard deviation across all 5 ZIP files(calculate_Mean_StdDeviation.ipynb)
+Step 3: Generate Labels in the order  FG BG FG-BG FG-BG-Mask Depth (generate_labels.ipynb)
 
 # Activity 1:Data Preparation
 Prepare image set with foreground(fg), background(bg), mask(fg-mask), fg_bg and fg_bg_mask
