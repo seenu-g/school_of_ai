@@ -200,14 +200,17 @@ total 4024M
 -rw------- 1 root root 807M May 10 08:28 data_part5.zip
 
 Background samples
-<img src="result_display/Background.jpg">
+![Alt text](https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Background.jpg?sanitize=true)
+<img src="https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Background.jpg">
 Foreground samples
-<img src="result_display/Foreground.jpg">
+![Alt text](https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Foreground.jpg?sanitize=true)
+<img src="https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Foreground.jpg">
 Mask samples
-<img src="result_display/mask.jpg">
-Fg-Bg  samples
-<img src="result_display/Fg-Bg.jpg">
+![Alt text](https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/mask.jpg?sanitize=true)
+<img src="https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/mask.jpg">Fg-Bg  samples
 Fg-Bg-Mask samples
-<img src="result_display/Fg-Bg-Mask.jpg">
+![Alt text](https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Fg-Bg-Mask.jpg?sanitize=true)
+<img src="https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Fg-Bg-Mask.jpg">
 Depth samples
-<img src="result_display/Depth.jpg">
+![Alt text](https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Depth.jpg?sanitize=true)
+<img src="https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Depth.jpg">
