@@ -141,8 +141,8 @@ Merge fg-bg and depth images in to 5 Zip files(instead of 10(5+5))
 3. Generate Labels(generate_labels.ipynb) that containspath of all images. 
 It is in a order FG BG FG-BG FG-BG-Mask Depth
 
-# Folder Content and size
-Please check ReadMe.txt for this in the same folder structure for files
+# Folder Directory Structure and size
+Please check ReadMe.txt for directory structure in the same folder structure for files
  * Total - 4GB(Approx)
      * Background Images - 1.2MB
      * Foreground Images - 1.2MB
@@ -150,12 +150,6 @@ Please check ReadMe.txt for this in the same folder structure for files
      * Dataset - 3.92GB
      * Labels - 52MB
 
-total 4024M
--rw------- 1 root root 810M May 10 08:28 data_part1.zip
--rw------- 1 root root 804M May 10 08:29 data_part2.zip
--rw------- 1 root root 798M May 10 08:28 data_part3.zip
--rw------- 1 root root 807M May 10 10:14 data_part4.zip
--rw------- 1 root root 807M May 10 08:28 data_part5.zip
 
 Background samples
 ![Background samples](https://github.com/seenu-g/school_of_ai/blob/master/chap14/result_display/Background.jpg?sanitize=true)

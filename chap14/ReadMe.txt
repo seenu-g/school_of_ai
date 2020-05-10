@@ -192,6 +192,13 @@ Dataset
                                 ------depth.jpb<<320-400K>>.jpg
 
 
+Total size - 4GB(Approx)
+       Background Images - 1.2MB
+       Foreground Images - 1.2MB
+       Mask - 333KB
+       Dataset - 3.92GB
+       Labels - 52MB
+
 total 4024M
 -rw------- 1 root root 810M May 10 08:28 data_part1.zip
 -rw------- 1 root root 804M May 10 08:29 data_part2.zip
