@@ -1,24 +1,24 @@
 Solving requirements provided in Assignment_Requirements.txt required multiple iterations going up and Down
 to ensure that we do not create garbage.
 
-#Activity 1: Data Generation
+# Activity 1: Data Generation
 Step 1: Collected 100 background images.(naming format as bg_<<n>>.png))
 Step 2: Collected 20 foreground images, removed it's background and made it transparent.(naming format  as fg_<<n>>.png)
 Step 3: Create mask for each of foreground images using GIMP (naming format  as mask_<<n>>.jpg)
 Step 4: Overlay foreground, foreground_mask on background, background-mask, flip to generate (fg_bg.img and fg_bg_mask.jpg)
 Step 5: Package as .ZIP files and Perform Calculations for mean and standard deviation
 
-#Activity 2: Generate Depth images for fg-bg images
+# Activity 2: Generate Depth images for fg-bg images
 Step 1 : unpackage ZIP
 Step 2 : Setup Code-repo and already trained model file. Make code changes for our needs
 Step 3 : Generate Depth images
 Step 4 : Package as ZIP file
 
-#Activity 3: Packaging 5 independently generated 80K images to created 400K images
+# Activity 3: Packaging 5 independently generated 80K images to created 400K images
 Step 1. Merage Output of activity 1 and activity 2 in to single ZIP file( 5 files instead of 10
 Step 2. Calculate mean and standard deviation across all 5 ZIP files
 
-#Activity 1:Data Preparation
+# Activity 1:Data Preparation
 Prepare image set with foreground(fg), background(bg), mask(fg-mask), fg_bg and fg_bg_mask
 
 ##Step 1: Collected 100 background images.(naming format as bg_<<n>>.png))
@@ -67,7 +67,7 @@ Generation took 10 minutes for 80K images. [At end of fighting and getting thing
 For 80K images, data_Part3.ZIP size was 572 MB
 Time taken to generate 80K images : 10 minutes
 
-#Activity 2: Generate Depth images for fg-bg images
+# Activity 2: Generate Depth images for fg-bg images
 Here we tried to leverage pre-trained model to generate depth images.[ we have no depth camera]
 https://github.com/ialhashim/DenseDepth
 [Selected other background images and then move to living room theme, 
@@ -96,7 +96,7 @@ It took around 3-4 hours to generate depth for 80k images.
 For 80K images, Depth_Part3.zip size was 236 MB. 
 Time taken to generate 80K images[ intermittent crashes]: 6 hours
 
-#Activity 3: Packaging
+# Activity 3: Packaging
 Merge fg-bg and depth images in to 5 Zip files(instead of 10(5+5)) 
 [ done for data_part3.zip in create_dataset.ipynb
 1. Unzip  data_Part3.ZIP to folders under content folder(drive.mount('/content/gdrive')
@@ -104,15 +104,15 @@ Merge fg-bg and depth images in to 5 Zip files(instead of 10(5+5))
 3. Merge folders under content folder
 4. Create new Zip files that got store in my drive as data_part3.zip
 
-#Activity 4: Calculate Mean and Standard Deviation 
+# Activity 4: Calculate Mean and Standard Deviation 
 [done for data_part1.zip ,....,....,...,data_part5.zip in calculate_Mean_StdDeviation.ipynb]
 1. Unzip files under content folder(drive.mount('/content/gdrive')
 2. Calculate mean and standard deviation
 
-#Activity 5: Generate Labels
+# Activity 5: Generate Labels
 Used this code to generate the path of all images. It is in a order FG BG FG-BG FG-BG-Mask Depth
 
-#Folder Content and size
+# Folder Content and size
 Background
 bg1.jpg, bg2.jpg,------------------------------------------------------------,bg99.jpg,bg 100.jpg
 Foreground
@@ -161,6 +161,7 @@ Dataset
                                 ------fg-bg-mask<<320-400K>>.jpg
                          --Depth
                                 ------depth.jpb<<320-400K>>.jpg
+
 
 total 4024M
 -rw------- 1 root root 810M May 10 08:28 data_part1.zip
