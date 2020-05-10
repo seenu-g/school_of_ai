@@ -1,6 +1,15 @@
 Solving requirements provided in Assignment_Requirements.txt required multiple iterations going up and Down
 to ensure that we do not create garbage.
 
+Explanation of Files
+1. Dataset output is present in Google Drive
+https://drive.google.com/drive/folders/1W4B4YRgMHXstVExFzE6An1rz2DkowVrj?usp=sharing
+2.Overlap_and_maks.ipynb - generate fg-bg, fg-bg-mask images including flip
+3.DepthMapsTrial.ipynb - generate depth images
+4.create_dataset.ipynb - merges ZIP files of my dataset
+5.calculate_Mean_StdDeviation.ipynb - Calculate mean and standard deviation for  5 zip image files of the dataset
+6.generate_labels.ipynb - generate labels for  5 zip image files of the dataset
+
 # Activity 1: Data Generation
 Step 1: Collected 100 background images.(naming format as bg_<<n>>.png))
 Step 2: Collected 20 foreground images, removed it's background and made it transparent.(naming format  as fg_<<n>>.png)
@@ -17,6 +26,7 @@ Step 4 : Package as ZIP file
 # Activity 3: Packaging 5 independently generated 80K images to created 400K images
 Step 1. Merage Output of activity 1 and activity 2 in to single ZIP file( 5 files instead of 10
 Step 2. Calculate mean and standard deviation across all 5 ZIP files
+Step 3: Generate Labels in the order  FG BG FG-BG FG-BG-Mask Depth
 
 # Activity 1:Data Preparation
 Prepare image set with foreground(fg), background(bg), mask(fg-mask), fg_bg and fg_bg_mask
@@ -108,9 +118,8 @@ Merge fg-bg and depth images in to 5 Zip files(instead of 10(5+5))
 [done for data_part1.zip ,....,....,...,data_part5.zip in calculate_Mean_StdDeviation.ipynb]
 1. Unzip files under content folder(drive.mount('/content/gdrive')
 2. Calculate mean and standard deviation
-
-# Activity 5: Generate Labels
-Used this code to generate the path of all images. It is in a order FG BG FG-BG FG-BG-Mask Depth
+3. Generate Labels(generate_labels.ipynb) that containspath of all images. 
+It is in a order FG BG FG-BG FG-BG-Mask Depth
 
 # Folder Content and size
 Background
