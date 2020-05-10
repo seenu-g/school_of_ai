@@ -142,55 +142,13 @@ Merge fg-bg and depth images in to 5 Zip files(instead of 10(5+5))
 It is in a order FG BG FG-BG FG-BG-Mask Depth
 
 # Folder Content and size
-Background
-bg1.jpg, bg2.jpg,------------------------------------------------------------,bg99.jpg,bg 100.jpg
-Foreground
-bg1.jpg, bg2.jpg,------------------------------------------------------------,bg99.jpg,bg100.jpg[Team]
-bg61.jpg, bg62.jpg,------------------------------------------------------------,bg79.jpg,bg80.jpg[Team]
-Dataset
---data_part1.zip
-                  --data1
-                         --Fg-Bg
-                                ------fg-bg<<1-80K>>.jpg
-                         --Fg_Bg-Mask
-                                ------fg-bg-mask<<1-80k>>.jpg
-                         --Depth
-                                ------depth.jpb<<1-80k>>.jpg
---data_part2.zip
-                  --data2
-                         --Fg-Bg
-                                ------fg-bg<<80-160K>>.jpg
-                         --Fg_Bg-Mask
-                                ------fg-bg-mask<<80-160k>>.jpg
-                         --Depth
-                                ------depth.jpb<<80-160k>>.jpg
---data_part4.zip
-                  --data4
-                         --Fg-Bg
-                                ------fg-bg<<160-240K>>.jpg
-                         --Fg_Bg-Mask
-                                ------fg-bg-mask<<160-240K>>.jpg
-                         --Depth
-                                ------depth.jpb<<160-240K>>.jpg----data_part5.zip
-
---data_part3.zip
-                  --data3
-                         --Fg-Bg
-                                ------fg-bg<<240-320K>>.jpg
-                         --Fg_Bg-Mask
-                                ------fg-bg-mask<<240-320K>>.jpg
-                         --Depth
-                                ------depth.jpb<<240-320K>>.jpg
-
---data_part5.zip
-                  --data5
-                         --Fg-Bg
-                                ------fg-bg<<320-400K>>.jpg
-                         --Fg_Bg-Mask
-                                ------fg-bg-mask<<320-400K>>.jpg
-                         --Depth
-                                ------depth.jpb<<320-400K>>.jpg
-
+Please check ReadMe.txt for this in the same folder structure for files
+ * Total - 4GB(Approx)
+     * Background Images - 1.2MB
+     * Foreground Images - 1.2MB
+     * Mask - 333KB
+     * Dataset - 3.92GB
+     * Labels - 52MB
 
 total 4024M
 -rw------- 1 root root 810M May 10 08:28 data_part1.zip
