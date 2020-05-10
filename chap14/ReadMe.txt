@@ -12,6 +12,8 @@ https://drive.google.com/drive/folders/1W4B4YRgMHXstVExFzE6An1rz2DkowVrj?usp=sha
 
 Display samples images corresponding to fg, bg,mask,fg-bg,fg-bg-mask and depth as part of
 calculate_Mean_StdDeviation.ipynb, which also contains Calculations of mean and standard deviation
+The result images are present in https://github.com/seenu-g/school_of_ai/tree/master/chap14/result_display
+and also in https://github.com/seenu-g/school_of_ai/blob/master/chap14/ReadMe.md
 
 fg-Bg
 Mean               : [0.65830478 0.61511271 0.5740604 ]
