@@ -21,13 +21,13 @@ Step 2. Calculate mean and standard deviation across all 5 ZIP files
 # Activity 1:Data Preparation
 Prepare image set with foreground(fg), background(bg), mask(fg-mask), fg_bg and fg_bg_mask
 
-##Step 1: Collected 100 background images.(naming format as bg_<<n>>.png))
+## Step 1: Collected 100 background images.(naming format as bg_<<n>>.png))
 1. Chose Living Room as a background image theme 
 2. Downloaded 100 different types living rooms as .JPG files
 3. Resized all to 224x224. 
 Did some dance to have most background image size  around 10-20 kb.
 
-##Step 2: Collected 20 foreground images, removed it's background and made it transparent.(naming format  as fg_<<n>>.png)
+## Step 2: Collected 20 foreground images, removed it's background and made it transparent.(naming format  as fg_<<n>>.png)
 1. chose Humans as foreground image theme.
 2. Downloaded  100 different types of humans(single, human) as .PNG files
 3. Removed their background using PPT(Tried with Gimp and failed to remove transparency. Took help as my powerpoint was old version)
@@ -35,12 +35,12 @@ Did some dance to have most background image size  around 10-20 kb.
 5. Image dimesntionsize was between 100-120 px and maintained apect ratio.
 Most foregound images  are of size 5-10 kb approx. 
 
-##Step 3: Create mask for each of foreground images using GIMP (naming format  as mask_<<n>>.jpg)
+## Step 3: Create mask for each of foreground images using GIMP (naming format  as mask_<<n>>.jpg)
 1.Select the transparent foreground image, go to colors and select invert colors. It will give white image with black background.
 2.Then select threshold, vary the threshold values till you get complete white mask.
 3.Then exported mask as .JPG files
 
-##Step 4a: Overlay foreground on background and generate (naming format fg_bg.jpg)
+## Step 4a: Overlay foreground on background and generate (naming format fg_bg.jpg)
 [ As our team has 5, we separated and created 80000 images, leading to 400K images in total]
 1. For each background images, 
    1. we took 20 foreground images,
@@ -49,14 +49,14 @@ Most foregound images  are of size 5-10 kb approx.
   [bg.paste(fg, (r1,r2),fg), where bg is background image, fg is foreground image, (r1,r2) are the top-left overlayed position.]
    4. Optimize image, reduce it quality to 30, so that to use less storage space
 {Remember that Step 4a and Step 4b were done together. So (r1,r2) remained common across both)
-##Step 4b: Generate masks for overlayed image (naming format fg_bg_mask.jpg)
+## Step 4b: Generate masks for overlayed image (naming format fg_bg_mask.jpg)
 1.  Generate black background of the same size as background images
 2.  Overlayed the foreground mask on top of it.
 3.  Repeated step 3 and Step 4 here ( see it as creation of fg_bg_mask and fg_bg_mask)
 
 Generation took 10 minutes for 80K images. [At end of fighting and getting things right]
 
-##Step 5 : Package and Do Calulations
+## Step 5 : Package and Do Calulations
 1. Confirmed that 80K images are generated(400K images in total as group) across fg_bg and fg_bg_mask
 2. Merged the folders and zipped it.[Lot of fun and have to be carful.Learnt to extract single image from Zip file]
  [ Wrote within my own drive and Collab stopped working. Have to clean files. 
@@ -73,7 +73,7 @@ https://github.com/ialhashim/DenseDepth
 [Selected other background images and then move to living room theme, 
 as this repo seems to be build on NYU dataset that contains living rooms]
 
-##Code mofifications [ Modification are present in Google Collab itself]
+## Code mofifications [ Modification are present in Google Collab itself]
 1. layer.py - upgrade for c tf>2.0, Renamed "resize_images" as "resize"
 2. utils.py - added resize(448,448), since 224 is very small, result is half the size of output. So we doubled the size.
               display Images - we converted the images to grayscale and saved the image.
@@ -83,11 +83,11 @@ as this repo seems to be build on NYU dataset that contains living rooms]
     3. While running 80k/200 times,  Collab crashed. We change start number at crash based on images already processed
 
 
-##Step 1 : Unzip image file to content folder(drive.mount('/content/gdrive'))
-##Step 2 : Clone Depth model output from
+## Step 1 : Unzip image file to content folder(drive.mount('/content/gdrive'))
+## Step 2 : Clone Depth model output from
          wget https://s3-eu-west-1.amazonaws.com/densedepth/nyu.h5 -O ./DepthModel/nyu.h5
-##Step 3 : Generate depth images using modified code from test.py
-##Step 4 : Zip images  and the generated Zip alone was stored in my drive as Depth_Part3.ZIP ]
+## Step 3 : Generate depth images using modified code from test.py
+## Step 4 : Zip images  and the generated Zip alone was stored in my drive as Depth_Part3.ZIP ]
 
 Zipped the entire folder
 Each depth image size is 2-3kb. Each of 5 zip files took around 260-290 MB of storage. 
@@ -119,7 +119,7 @@ Foreground
 bg1.jpg, bg2.jpg,------------------------------------------------------------,bg99.jpg,bg100.jpg[Team]
 bg61.jpg, bg62.jpg,------------------------------------------------------------,bg79.jpg,bg80.jpg[Team]
 Dataset
---**data_part1.zip**
+--data_part1.zip
                   --data1
                          --Fg-Bg
                                 ------fg-bg<<1-80K>>.jpg
@@ -127,7 +127,7 @@ Dataset
                                 ------fg-bg-mask<<1-80k>>.jpg
                          --Depth
                                 ------depth.jpb<<1-80k>>.jpg
---**data_part2.zip**
+--data_part2.zip
                   --data2
                          --Fg-Bg
                                 ------fg-bg<<80-160K>>.jpg
@@ -135,7 +135,7 @@ Dataset
                                 ------fg-bg-mask<<80-160k>>.jpg
                          --Depth
                                 ------depth.jpb<<80-160k>>.jpg
---**data_part4.zip**
+--data_part4.zip
                   --data4
                          --Fg-Bg
                                 ------fg-bg<<160-240K>>.jpg
@@ -144,7 +144,7 @@ Dataset
                          --Depth
                                 ------depth.jpb<<160-240K>>.jpg----data_part5.zip
 
---**data_part3.zip**
+--data_part3.zip
                   --data3
                          --Fg-Bg
                                 ------fg-bg<<240-320K>>.jpg
@@ -153,7 +153,7 @@ Dataset
                          --Depth
                                 ------depth.jpb<<240-320K>>.jpg
 
---**data_part5.zip**
+--data_part5.zip
                   --data5
                          --Fg-Bg
                                 ------fg-bg<<320-400K>>.jpg
