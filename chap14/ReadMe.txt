@@ -200,14 +200,14 @@ total 4024M
 -rw------- 1 root root 807M May 10 08:28 data_part5.zip
 
 Background samples
-![alt text](result_display/Background.jpg?raw=true)
+<img src="result_display/Background.jpg">
 Foreground samples
-![alt text](result_display/Foreground.jpg?raw=true)
+<img src="result_display/Foreground.jpg">
 Mask samples
-![alt text](result_display/mask.jpg?raw=true)
+<img src="result_display/mask.jpg">
 Fg-Bg  samples
-![alt text](result_display/Fg-Bg.jpg?raw=true)
+<img src="result_display/Fg-Bg.jpg">
 Fg-Bg-Mask samples
-![alt text](result_display/Fg-Bg-Mask.jpg?raw=true)
+<img src="result_display/Fg-Bg-Mask.jpg">
 Depth samples
-![alt text](result_display/Depth.jpg?raw=true)
+<img src="result_display/Depth.jpg">
