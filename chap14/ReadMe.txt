@@ -198,3 +198,16 @@ total 4024M
 -rw------- 1 root root 798M May 10 08:28 data_part3.zip
 -rw------- 1 root root 807M May 10 10:14 data_part4.zip
 -rw------- 1 root root 807M May 10 08:28 data_part5.zip
+
+Background samples
+![alt text](result_display/Background.jpg?raw=true)
+Foreground samples
+![alt text](result_display/Foreground.jpg?raw=true)
+Mask samples
+![alt text](result_display/mask.jpg?raw=true)
+Fg-Bg  samples
+![alt text](result_display/Fg-Bg.jpg?raw=true)
+Fg-Bg-Mask samples
+![alt text](result_display/Fg-Bg-Mask.jpg?raw=true)
+Depth samples
+![alt text](result_display/Depth.jpg?raw=true)
