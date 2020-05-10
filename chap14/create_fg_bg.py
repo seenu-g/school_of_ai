@@ -6,7 +6,7 @@ import PIL
 
 black = np.zeros((224,224))
 bg_file_name = f'Background/bg1.jpg'
-fg_file_name =f'Foreground/f61.png'
+fg_file_name =f'Foreground/fg1.png'
 mask_file_name =f'Fg-Mask/mask1.jpg'
 
 outfile = open("mapping.txt","a+")
@@ -15,8 +15,8 @@ start = 1
 
 for j in  range(61,62): #1 foreground image  ---------------You should choose your numbers. Place only 20 images no flipped one-------
      
-    fg = Image.open(f'Foreground/fg{str(j)}.png').convert('LA')
-    mask = Image.open(f'Fg-Mask/mask{str(j)}.jpg').convert('LA')
+    fg = Image.open(f'Foreground/fg{str(j)}.png').convert('RGBA')
+    mask = Image.open(f'Fg-Mask/mask{str(j)}.jpg').convert('RGBA')
 
     for k in range(1,21): #---------------------Randomly Placing 20 times(Same for all)--------------------------------
        
@@ -32,14 +32,10 @@ for j in  range(61,62): #1 foreground image  ---------------You should choose yo
         flipfg = fg1.transpose(PIL.Image.FLIP_LEFT_RIGHT) #flip image
         flipmask = m1.transpose(PIL.Image.FLIP_LEFT_RIGHT) #flip mask
 
-        fg1.putalpha(255)
-        bg1.paste(fg1,(r1,r2))
-        flipfg.putalpha(255)
-        bg2.paste(flipfg,(r1,r2))
-        m1.putalpha(255)
-        black_img1.paste(m1,(r1,r2))
-        flipmask.putalpha(255)
-        black_img2.paste(flipmask,(r1,r2))
+        bg1.paste(fg1,(r1,r2),fg1)
+        bg2.paste(flipfg,(r1,r2),flipfg)
+        black_img1.paste(m1,(r1,r2),m1)
+        black_img2.paste(flipmask,(r1,r2),flipmask)
             
         bg1.save(f"Fg-Bg/fg-bg{str(start)}.jpg",optimize=True, quality=30)
         black_img1.save(f"Fg-Bg-Mask/fg-bg-mask{str(start)}.jpg",optimize=True, quality=30) 
