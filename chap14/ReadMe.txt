@@ -10,6 +10,19 @@ https://drive.google.com/drive/folders/1W4B4YRgMHXstVExFzE6An1rz2DkowVrj?usp=sha
 3. Background also present in https://github.com/seenu-g/school_of_ai/tree/master/chap14/Foreground
 4. Mask images also present in https://github.com/seenu-g/school_of_ai/tree/master/chap14/Mask
 
+Display samples images corresponding to fg, bg,mask,fg-bg,fg-bg-mask and depth as part of
+calculate_Mean_StdDeviation.ipynb, which also contains Calculations of mean and standard deviation
+
+fg-Bg
+Mean               : [0.65830478 0.61511271 0.5740604 ]
+Standard Deviation : [0.24408717 0.2542491  0.26870159]
+fg-Bg-Mask
+Mean               : [0.04608837 0.04608837 0.04608837]
+Standard Deviation : [0.20544916 0.20544916 0.20544916]
+Depth
+Mean               : [0.50911522 0.50911522 0.50911522]
+Standard Deviation : [0.28174302 0.28174302 0.28174302]
+
 Python Collab Files
 1.Overlap_and_maks.ipynb - generate fg-bg, fg-bg-mask images including flip
 2.DepthMapsTrial.ipynb - generate depth images
