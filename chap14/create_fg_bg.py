@@ -55,5 +55,19 @@ for i in range(1,101):
                 outfile.write(' bg'+ str(i)+'.jpg' + ' fg'+ str(j)+'.png' + ' mask'+ str(j)+'.jpg' + ' fg-bg' + str(start)+'.jpg' + ' fg-bg-mask' +str(start)+'.jpg'+ '\n')
                 start+=1
                 print(start)
+                
+                del r1 
+                del r2 
+                del bg1 
+                del bg2 
+                del fg1 
+                del m1 
+                del flipfg
+                del flipmask 
+                del black_img1 
+                del black_img2
+            del fg
+            del mask
+    del bg
         
 outfile.close()
